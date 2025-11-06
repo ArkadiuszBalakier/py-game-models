@@ -28,7 +28,7 @@ def main() -> None:
             for skill in race_data["skills"]:
                 Skill.objects.get_or_create(
                     name=skill["name"],
-                    description=skill["bonus"],
+                    bonus=skill["bonus"],
                     race=race_obj)
 
             guild_data = data.get("guild")
